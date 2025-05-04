@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-US" class="tcb">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8"/>
     <title>Join Our Exclusive WhatsApp Training Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="robots" content="max-image-preview:large"/>
     
-    <!-- Meta Pixel Code (Simplified to one instance; replace with your actual Pixel ID) -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Meta Pixel Code (Replace '1436616997741981' with your Pixel ID) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -23,120 +26,96 @@
     src="https://www.facebook.com/tr?id=1436616997741981&ev=PageView&noscript=1"/></noscript>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Basic CSS for cleaner styling -->
-    <style type="text/css">
-        :root {
-            --primary-color: #1372D3;
-            --accent-color: #FF4D4D;
-            --bg-color: #F5FAFA;
-            --text-color: #333333;
+    <!-- Custom Styles -->
+    <style>
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .hover-scale {
+            transition: transform 0.3s ease;
         }
-        html, body {
-            height: auto;
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-color);
-            background-color: #FFFFFF;
+        .hover-scale:hover {
+            transform: scale(1.05);
         }
-        .container {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .section {
-            background-color: var(--bg-color);
-            padding: 40px 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .highlight {
-            color: var(--accent-color);
-            font-weight: 700;
-        }
-        .button {
-            display: inline-block;
-            background: linear-gradient(45deg, var(--primary-color), #1A94FF);
-            color: #FFFFFF;
-            font-family: 'Roboto', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .footer {
-            font-size: 12px;
-            color: #666;
-            padding: 20px;
-            text-align: center;
-        }
-        .footer a {
-            color: #666;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 767px) {
-            .container {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 28px;
-            }
-            p {
-                font-size: 18px;
-            }
-            .button {
-                font-size: 20px;
-                padding: 12px 20px;
-            }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1E3A8A, #3B82F6);
         }
     </style>
 </head>
-<body>
-    <!-- Main Content -->
-    <div class="container">
-        <div class="section">
-            <h1>Join Our Exclusive WhatsApp Training Group!</h1>
-            <p class="highlight">Limited Spots Available!</p>
-            <p>Unlock exclusive training and insights by joining our WhatsApp group. Click below to secure your spot before it's too late!</p>
-            <a href="https://wa.me/2349154096776" class="button" target="_blank">JOIN THE WHATSAPP GROUP NOW</a>
-            <p class="highlight">Hurry! Group is filling up fast!</p>
+<body class="font-poppins bg-gray-100">
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Unlock Exclusive Training!
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 animate-pulse-slow">
+                Join Our WhatsApp Group for Limited-Time Insights
+            </p>
+            
+            <!-- Countdown Timer -->
+            <div id="countdown" class="text-lg md:text-xl mb-8 bg-white text-gray-800 inline-block px-6 py-4 rounded-lg shadow-lg">
+                <span id="timer">Loading...</span>
+            </div>
+            
+            <!-- Call to Action Button -->
+            <a href="https://wa.me/2349154096776" 
+               class="inline-block bg-yellow-400 text-gray-900 font-semibold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover-scale"
+               target="_blank">
+                Join the WhatsApp Group Now
+            </a>
+            <p class="text-lg mt-6 italic font-medium">
+                Hurry! Spots are filling up fast!
+            </p>
         </div>
-    </div>
+    </section>
+    
+    <!-- Disclaimer Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-2xl font-semibold mb-4">Disclaimer</h2>
+            <p class="text-gray-600 text-base leading-relaxed">
+                The sales figures and results discussed in this training are our personal results and, in some cases, the results of previous or existing clients. Please understand that these results are not typical. Any financial numbers referenced here are estimates, projections, or past results and should not be considered exact, actual, or a promise of potential earnings; all numbers are illustrative only. Your results will vary and depend on many factors, including but not limited to your background, experience, and work ethic. All business entails risk as well as massive and consistent effort and action.
+            </p>
+        </div>
+    </section>
     
     <!-- Footer -->
-    <div class="footer">
-        <p><strong>© 2025 Earn from home carrd. All Rights Reserved.</strong></p>
-        <p><a href="#">Support</a> | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Disclaimers</a></p>
-        <p>This site is not a part of the YouTube, Google, or Facebook website; Google Inc. or Facebook Inc. Additionally, this site is not endorsed by YouTube, Google, or Facebook in any way. Facebook is a trademark of Facebook, Inc. YouTube is a trademark of Google, Inc.</p>
-        <p><strong>DISCLAIMER:</strong> The sales figures and results discussed in this training are our personal results and, in some cases, the results of previous or existing clients. Please understand that these results are not typical. Any financial numbers referenced here are estimates, projections, or past results and should not be considered exact, actual, or a promise of potential earnings; all numbers are illustrative only. Your results will vary and depend on many factors, including but not limited to your background, experience, and work ethic. All business entails risk as well as massive and consistent effort and action.</p>
-    </div>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2025 Earn from home card. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Countdown Timer Script -->
+    <script>
+        function startCountdown() {
+            // Set end time (e.g., 24 hours from now)
+            const endTime = new Date().getTime() + 24 * 60 * 60 * 1000;
+            
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById('timer').innerHTML = "Offer Expired!";
+                    return;
+                }
+                
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('timer').innerHTML = 
+                    `${hours}h ${minutes}m ${seconds}s Left!`;
+            }, 1000);
+        }
+        
+        // Start timer when page loads
+        window.onload = startCountdown;
+    </script>
 </body>
 </html>
